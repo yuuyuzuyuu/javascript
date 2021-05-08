@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Practice</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="target"></div>
+
+    <script>
+      'use strick'
+
+      document.getElementById('target').addEventListener('click', () => {
+        document.getElementById('target').style.background = 'pink';
+      });
+    </script>
+  </body>
+</html>

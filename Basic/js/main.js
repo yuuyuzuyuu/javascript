@@ -70,3 +70,65 @@ console.log(total);
 
 const double = a => a*2;
 console.log(double(12));
+
+//配列
+
+{
+  const otherScores = [20,10];
+  const scores = [80,90,40,70, ...otherScores];
+  // scores.push(60, 50);
+  // scores.shift();
+
+    for (let i = 0; i < scores.length; i++) {
+      console.log(`Score ${i}:${scores[i]}`);
+    }
+
+    scores.forEach((score, index) => {
+      console.log(`Score ${index}:${score}`)
+    });
+}
+
+//map
+
+{
+  const prices = [180, 190, 200];
+
+  const updatePrices = prices.map(price => price +20);
+    console.log(updatePrices);
+}
+
+//filter
+
+{
+  const numbers =[1,6,7,8,9];
+
+  // const evenNumbers = numbers.filter(number => {
+  //   if (number%2===0){
+  //     return true;
+  //   }else {
+  //     return false;
+  //   }
+  // });
+
+  const evenNumbers = numbers.filter(number => number%2===0);
+
+  console.log(evenNumbers);
+}
+
+//オブジェクト記法
+
+{
+  const point = {
+    x:100,
+    y:180,
+  };
+
+  point.x=120;
+
+  console.log(point['x']);
+
+  point.z=90;
+  delete point.y;
+
+  console.log(point);
+} 

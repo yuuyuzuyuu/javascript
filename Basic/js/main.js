@@ -203,3 +203,94 @@ console.log(double(12));
 {
   console.log(Math.floor(Math.random()*6)+1);
 }
+
+//日時
+
+{
+  // d.getFullYear(); 年
+  // d.getMonth();　月
+  // d.getDate();　日
+  // d.getDay();　曜日
+  
+  const d = new Date();
+  console.log(d);
+
+  console.log(`${d.getMonth()+1}月${d.getDate()}日`);
+}
+
+//alert, confirm
+{
+  // alert('hello');
+  // const answer = confirm('削除しますか？');
+  // if (answer) {
+  //   console.log('削除しました');
+  // } else {
+  //   console.log('キャンセルしました');
+  // }
+ }
+
+//  タイマー機能
+
+{
+  // let i = 0;
+
+  // function showTime() {
+  //   console.log(new Date());
+  //   i++;
+  //   if(i>2) {
+  //     clearInterval(intervalId);
+  //   }
+  // }
+
+  // const intervalId = setInterval(showTime, 1000);
+}
+
+// 例外処理
+
+{
+  const name = 2;
+
+  try {
+    console.log(name.toUpperCase()); //大文字にする
+  } catch(e) {
+    console.log(e);
+  }
+
+  console.log('Finish!');
+}
+
+// オブジェクトが複数ある時
+{
+  class Post{
+    constructor(text) {
+      this.text = text;
+      this.likeCount = 0;
+    }
+
+      show() {
+        console.log(`${this.text} - ${this.likeCount}likes`);
+      }
+
+      like() {
+        this.likeCount++;
+        this.show();
+      }
+
+      //静的メソッド
+      // thisは使えない
+      static showInfo() {
+        console.log('Post class version 1.0');
+      }
+  }
+
+  const posts = [
+    new Post('JavaScriptの勉強中'),
+    new Post('プログラミング楽しい！'),
+  ];
+
+  posts[0].like();
+  posts[1].like();
+
+  Post.showInfo();
+
+}

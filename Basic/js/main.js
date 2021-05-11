@@ -132,3 +132,74 @@ console.log(double(12));
 
   console.log(point);
 } 
+
+//オブジェクトのプロパティを列挙するとき
+
+{
+  const point = {
+    x: 100,
+    y: 180,
+  }
+
+  const keys = Object.keys(point);
+  keys.forEach(key => {
+    console.log(`Key: ${key} Value: ${point[key]}`);
+  })
+}
+
+{
+  const points = [
+    {x: 30, y: 20},
+    {x: 10, y: 50},
+    {x: 40, y: 20},
+  ];
+  console.log(points[1].y);
+}
+
+//変数の代入
+
+{
+  let x = [1, 2];
+  let y = [...x];
+  x[0] = 5;
+  console.log(x);
+  console.log(y);
+}
+
+//部分文字列
+
+{
+  const str = 'hello';
+  //str.substring(開始位置、終了位置);
+  console.log(str.substring(2,4));
+
+  console.log(str[1]);
+}
+
+//join()、split()
+
+{
+  const d = [2019,11,13];
+  console.log(d.join('/'));
+
+  const t = '17:08:24';
+  console.log(t.split(':'));
+
+  const [hour, minute, second] = t.split(':');
+  console.log(hour);
+  console.log(minute);
+  console.log(second);
+}
+
+//数値計算
+
+// floor 小数点以下切り捨て
+// ceil 〃切り上げ
+// round 四捨五入
+// toFixed(数字)  数字桁まで表示
+// Math.random 0以上１未満のランダムな数値を生成
+// Math.random()
+
+{
+  console.log(Math.floor(Math.random()*6)+1);
+}

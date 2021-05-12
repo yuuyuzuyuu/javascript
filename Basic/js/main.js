@@ -294,3 +294,19 @@ console.log(double(12));
   Post.showInfo();
 
 }
+
+// 要素を取得する方法
+// 1.id属性がついていたら  getElementById('target')
+// 2.一つの要素を取得するなら  querySelector('section h1')
+// 3.複数の要素を取得するなら  querySelectorAll('ul > li')
+// 4.その他の方法            getElementsByTagName('h1')
+//                         getElementsByClassName('box')
+
+{
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+
+    // targetNode.classList.toggle('my-color');
+    // targetNode.textContent = targetNode.dataset.translation;
+  });
+}

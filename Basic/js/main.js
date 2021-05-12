@@ -304,9 +304,21 @@ console.log(double(12));
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    const targetNode = document.getElementById('target');
+    const item1 = document.querySelectorAll('li')[1];
 
-    // targetNode.classList.toggle('my-color');
-    // targetNode.textContent = targetNode.dataset.translation;
+    // item1.removeChild();
+    document.querySelector('ul').removeChild(item1);
+  });
+}
+
+{
+  document.querySelector('button').addEventListener('click', () => {
+    const li = document.createElement('li');
+    const text = document.querySelector('input');
+    li.textContent = text.value;
+    document.querySelector('ul').appendChild(li);
+
+    text.value = '';
+    text.focus();
   });
 }

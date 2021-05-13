@@ -304,21 +304,9 @@ console.log(double(12));
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    const item1 = document.querySelectorAll('li')[1];
-
-    // item1.removeChild();
-    document.querySelector('ul').removeChild(item1);
-  });
-}
-
-{
-  document.querySelector('button').addEventListener('click', () => {
     const li = document.createElement('li');
-    const text = document.querySelector('input');
-    li.textContent = text.value;
+    const color = document.querySelector('select');
+    li.textContent = `${color.value} - ${color.selectedIndex}`;
     document.querySelector('ul').appendChild(li);
-
-    text.value = '';
-    text.focus();
   });
 }

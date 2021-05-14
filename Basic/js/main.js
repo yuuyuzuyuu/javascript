@@ -303,11 +303,9 @@ console.log(double(12));
 //                         getElementsByClassName('box')
 
 {
-  document.querySelector('button').addEventListener('dblclick', () => {
-    console.log('Double Clicked!');
-  });
-
-  document.addEventListener('mousemove', () => {
-    console.log('moved!');
+  document.querySelector('ul').addEventListener('click', e => {
+    if (e.target.nodeName === 'li') {
+      e.target.classList.toggle('done');
+    }
   });
 }

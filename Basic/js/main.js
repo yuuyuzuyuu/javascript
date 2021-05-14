@@ -303,18 +303,11 @@ console.log(double(12));
 //                         getElementsByClassName('box')
 
 {
-  document.querySelector('button').addEventListener('click', () => {
-    const colors = document.querySelectorAll('input');
-    let selectedColor;
+  document.querySelector('button').addEventListener('dblclick', () => {
+    console.log('Double Clicked!');
+  });
 
-    colors.forEach(color => {
-      if (color.checked === true) {
-        selectedColor = color.value;
-      }
-    });
-
-    const li = document.createElement('li');
-    li.textContent = selectedColor;
-    document.querySelector('ul').appendChild(li);
+  document.addEventListener('mousemove', () => {
+    console.log('moved!');
   });
 }

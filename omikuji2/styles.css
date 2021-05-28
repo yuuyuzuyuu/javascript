@@ -1,0 +1,22 @@
+#btn {
+  width: 100px;
+  height: 100px;
+  background: steelblue;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  margin: 20px auto;
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 10px 0 black;
+}
+
+#btn:hover {
+  opacity: 0.8;
+}
+
+#btn:active {
+  box-shadow: 0 5px 0 black;
+  margin-top: 25px;
+}

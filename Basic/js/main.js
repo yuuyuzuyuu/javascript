@@ -309,3 +309,9 @@ console.log(double(12));
     }
   });
 }
+
+{
+  const array = [1, 2, 4, 8];
+  const resultArray = array.map(x => x * 2)
+  console.log(resultArray);
+}
